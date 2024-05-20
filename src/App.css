@@ -42,6 +42,9 @@
   }
 }
 
+.animesusp {
+  animation: zoomIn 3s infinite;
+}
 .welcome-text {
   opacity: 0;
 }

@@ -1,15 +1,28 @@
-import React from 'react';
+import React, {Suspense} from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
+import logo from "./logo.jpg"
+
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import { BrowserRouter } from 'react-router-dom';
-
 const root = ReactDOM.createRoot(document.getElementById('root'));
+
+const Loading = () => {
+  return (
+    <div className="animesusp" style={{width: "100vw", height:"90vh", display: "flex", flexDirection: "column", justifyContent: "center", alignItems: "center"}}>
+      <img className="logo" alt="" src={logo}/>
+     <p>🌀 Loading...</p>
+    </div>
+    )
+}
+
 root.render(
   <React.StrictMode>
     <BrowserRouter>
-    <App />
+    <Suspense fallback={<Loading />}>
+      <App />
+    </Suspense>
     </BrowserRouter>
   </React.StrictMode>
 );
