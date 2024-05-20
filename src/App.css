@@ -1,0 +1,287 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: Monospace;
+}
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+.vieo-background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.video-background video {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  min-width: 100vw;
+  min-height: 100vh;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
+}
+@keyframes zoomIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.welcome-text {
+  opacity: 0;
+}
+
+.zoom-in {
+  animation: zoomIn 3s;
+  opacity: 1;
+}
+
+.hide-it {
+  opacity: 0;
+}
+
+.absolutely-centered {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  bottom: 25;
+}
+
+.logo {
+  width: 50px;
+  border-radius: 50px;
+}
+.control-btn {
+  display: flex;
+  justify-content: space-between;
+}
+
+.fade-enter {
+  opacity: 0;
+}
+.fade-enter-active {
+  opacity: 1;
+  transition: opacity 5000ms;
+}
+.fade-exit {
+  opacity: 1;
+}
+.fade-exit-active {
+  opacity: 0;
+  transition: opacity 200ms;
+}
+
+.nav {
+ display: flex;
+ align-items: center;
+ min-height: 20vh;
+ padding: 0 15px;
+ justify-content: space-between;
+ 
+}
+
+.join-us {
+  background-color: #e95a5a;
+  opacity: 0.8;
+  padding: 3px;
+  color: white;
+  border-radius: 5px;
+}
+
+.home {
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  align-items: center;
+  min-height: 50vh;
+}
+
+.home .welcome {
+  color: white;
+  font-size: 30px;
+  font-family: Monospace;
+  font-weight: bold;
+  text-align: center;
+}
+
+.contact-page {
+  color: white;
+  font-size: 25px;
+  text-align: center;
+}
+.about-page {
+  color: white;
+  font-size: 25px;
+  text-align: center;
+}
+
+.messages {
+ min-height: 30vh;
+ padding: 0 15px;
+  display: flex;
+  align-items: end;
+  justify-content: center;
+  text-align: center;
+  font-family: Monospace;
+  font-weight: bold;
+}
+
+.footer {
+ display: flex;
+ min-height: 20vh;
+ padding: 0 15px;
+ align-items: end;
+ justify-content: space-between;
+}
+
+.control-btn-container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  opacity: .7;
+}
+.enter-btn-container {
+  text-align: center;
+  padding-top: 25px;
+}
+
+.enter-btn {
+  display: inline-block;
+  border:2px solid #02d6ed;
+  background-color: #02d6ed20;
+  color:white;
+  cursor: pointer;
+  font-family: Monospace;
+  padding: 5px 20px;
+  font-size: 20px;
+  border-radius: 10px;
+}
+
+.enter-btn:hover {
+  background-color: #02d6ed;
+}
+.control-btn {
+  display: flex;
+}
+
+.song-control {
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-top: 55px;
+} 
+
+.song-control p {
+  color: white;
+  cursor : pointer;
+  font-family: Times New Roman;
+}
+.song-control p:hover{
+  color: #02d6ed;
+}
+.song-control p:last-child:hover{
+  color: #e95a5a;
+}
+
+@keyframes animBox{
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.box {
+  width:100%;
+  padding: 5px 20px;
+  animation: animBox 5s;
+}
+.next-prev {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+  
+}
+.next-prev button{
+  color: white;
+  border: 1px solid #02d6ed;
+  padding: 3px 8px;
+  border-radius: 3px;
+  background-color: #02d6ed30;
+}
+
+.next-prev button:hover {
+  background-color: #02d6ed;
+}
+
+
+/* Target laptops with widths between 1024px and 1440px */
+@media screen and (min-width: 912px) and (max-width: 1440px) {
+  /* Your styles for laptops go here */
+  body {
+    font-size: 18px;
+  }
+
+  .container {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    width: 80%;
+    margin: 0 auto;
+  }
+  
+  .home {
+    min-height: 75vh;
+  }
+  
+  .nav {
+    min-height: 25vh;
+  }
+  
+  /* Add more styles as needed */
+}
+@media screen and (min-width: 712px) and (max-width: 1440px) {
+  /* Your styles for laptops go here */
+  body {
+    font-size: 18px;
+  }
+
+  .container {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    width: 80%;
+    margin: 0 auto;
+  }
+  
+  .home {
+    min-height: 40vh;
+   /* background-color: red; */
+  }
+  
+  .nav {
+    min-height: 15vh;
+  }
+  
+  .footer {
+    
+  }
+  /* Add more styles as needed */
+}
